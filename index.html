@@ -82,7 +82,20 @@
             </div>
         </div>
     </nav>
-
+    <!-- SECCIÓN LOGO: Soporta imagen 'Logo.png' o muestra icono por defecto -->
+                        <div class="relative flex items-center">
+                            <!-- Intenta cargar Logo.png. Si falla (onerror), oculta la imagen y muestra el fallback -->
+                            <img src="Logo.png" 
+                                 alt="Logo CIER" 
+                                 class="h-10 w-auto object-contain" 
+                                 onerror="this.style.display='none'; document.getElementById('fallback-logo').classList.remove('hidden'); document.getElementById('fallback-logo').classList.add('flex');">
+                            
+                            <!-- Icono de Respaldo (Visible solo si falla la imagen) -->
+                            <div id="fallback-logo" class="w-9 h-9 bg-teal-700 rounded-lg hidden items-center justify-center text-white font-bold shadow-sm">
+                                C
+                            </div>
+                        </div>
+    <!-- FIN SECCIÓN LOGO -->
     <!-- Main Content Area -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
@@ -711,3 +724,4 @@
     </script>
 </body>
 </html>
+
