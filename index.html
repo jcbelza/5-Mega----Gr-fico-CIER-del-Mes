@@ -67,6 +67,20 @@
                         <div class="w-8 h-8 bg-teal-700 rounded-lg flex items-center justify-center text-white font-bold">C</div>
                         <span class="font-bold text-slate-800 text-lg tracking-tight">CIER <span class="text-slate-500 font-normal">| Monitor Febrero 2026</span></span>
                     </div>
+                     <!-- SECCIÓN LOGO: Soporta imagen 'Logo.png' o muestra icono por defecto -->
+                        <div class="relative flex items-center">
+                            <!-- Intenta cargar Logo.png. Si falla (onerror), oculta la imagen y muestra el fallback -->
+                            <img src="Logo.png" 
+                                 alt="Logo CIER" 
+                                 class="h-10 w-auto object-contain" 
+                                 onerror="this.style.display='none'; document.getElementById('fallback-logo').classList.remove('hidden'); document.getElementById('fallback-logo').classList.add('flex');">
+                            
+                            <!-- Icono de Respaldo (Visible solo si falla la imagen) -->
+                            <div id="fallback-logo" class="w-9 h-9 bg-teal-700 rounded-lg hidden items-center justify-center text-white font-bold shadow-sm">
+                                C
+                            </div>
+                        </div>
+                    <!-- FIN SECCIÓN LOGO -->
                 </div>
                 <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                     <button onclick="switchTab('dashboard')" id="nav-dashboard" class="active-tab inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 border-b-2 border-transparent hover:border-teal-300">
@@ -82,20 +96,7 @@
             </div>
         </div>
     </nav>
-    <!-- SECCIÓN LOGO: Soporta imagen 'Logo.png' o muestra icono por defecto -->
-                        <div class="relative flex items-center">
-                            <!-- Intenta cargar Logo.png. Si falla (onerror), oculta la imagen y muestra el fallback -->
-                            <img src="Logo.png" 
-                                 alt="Logo CIER" 
-                                 class="h-10 w-auto object-contain" 
-                                 onerror="this.style.display='none'; document.getElementById('fallback-logo').classList.remove('hidden'); document.getElementById('fallback-logo').classList.add('flex');">
-                            
-                            <!-- Icono de Respaldo (Visible solo si falla la imagen) -->
-                            <div id="fallback-logo" class="w-9 h-9 bg-teal-700 rounded-lg hidden items-center justify-center text-white font-bold shadow-sm">
-                                C
-                            </div>
-                        </div>
-    <!-- FIN SECCIÓN LOGO -->
+   
     <!-- Main Content Area -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
@@ -724,4 +725,5 @@
     </script>
 </body>
 </html>
+
 
